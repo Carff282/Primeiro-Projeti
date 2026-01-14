@@ -1,0 +1,197 @@
+Dashboard
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard MedConnect - Visão geral de consultas e prontuários da clínica">
+    <title>Dashboard - MedConnect</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+
+</head>
+<body>
+    <!-- Skip link para acessibilidade -->
+    <a href="#main-content" class="skip-link">Ir para conteúdo principal</a>
+
+    <!-- SIDEBAR DE NAVEGAÇÃO -->
+    <nav class="sidebar" role="navigation" aria-label="Navegação principal">
+        <div class="sidebar-header">
+            <img src="assets/logo.png" alt="Logo MedConnect" class="sidebar-logo">
+            <h2>MedConnect</h2>
+        </div>
+
+        <ul class="sidebar-menu" role="menubar">
+            <li role="none">
+                <a href="dashboard.html" class="menu-item active" 
+                   role="menuitem" aria-current="page" 
+                   aria-label="Dashboard - Visão geral da clínica">
+                    <span class="icon" aria-hidden="true">📊</span>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li role="none">
+                <a href="agendamentos.html" class="menu-item" 
+                   role="menuitem" aria-label="Gerenciar agendamentos">
+                    <span class="icon" aria-hidden="true">📅</span>
+                    <span>Agendamentos</span>
+                </a>
+            </li>
+            <li role="none">
+                <a href="prontuarios.html" class="menu-item" 
+                   role="menuitem" aria-label="Acessar prontuários">
+                    <span class="icon" aria-hidden="true">📋</span>
+                    <span>Prontuários</span>
+                </a>
+            </li>
+            <li role="none">
+                <a href="#" class="menu-item" 
+                   role="menuitem" aria-label="Configurações da clínica">
+                    <span class="icon" aria-hidden="true">⚙️</span>
+                    <span>Configurações</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <img src="assets/avatar.png" alt="Foto do Dr. João Silva" class="avatar">
+                <div>
+                    <p class="user-name" aria-label="Usuário logado">Dr. João Silva</p>
+                    <p class="user-role" aria-label="Cargo">Médico Responsável</p>
+                </div>
+            </div>
+            <a href="index.html" class="btn-logout" 
+               aria-label="Sair do sistema e fazer logout">
+                Sair
+            </a>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="main-content" class="main-content" role="main">
+        <header class="page-header">
+            <h1>Dashboard da Clínica</h1>
+            <div class="header-actions">
+                <button class="btn-secondary" 
+                        aria-label="Ver 3 notificações pendentes"
+                        data-tooltip="3 novas mensagens">
+                    🔔 Notificações (3)
+                </button>
+            </div>
+        </header>
+
+        <!-- ESTATÍSTICAS -->
+        <section class="stats-grid" aria-labelledby="stats-heading">
+            <h2 id="stats-heading" class="sr-only">Estatísticas da clínica</h2>
+
+            <article class="stat-card" role="figure">
+                <div class="stat-icon blue" aria-hidden="true">📅</div>
+                <div class="stat-info">
+                    <h3>Consultas Hoje</h3>
+                    <p class="stat-number" aria-label="12 consultas agendadas para hoje">12</p>
+                </div>
+            </article>
+
+            <article class="stat-card" role="figure">
+                <div class="stat-icon green" aria-hidden="true">✅</div>
+                <div class="stat-info">
+                    <h3>Confirmadas</h3>
+                    <p class="stat-number" aria-label="8 pacientes confirmaram a consulta">8</p>
+                </div>
+            </article>
+
+            <article class="stat-card" role="figure">
+                <div class="stat-icon yellow" aria-hidden="true">⏳</div>
+                <div class="stat-info">
+                    <h3>Pendentes</h3>
+                    <p class="stat-number" aria-label="4 pacientes aguardando confirmação">4</p>
+                </div>
+            </article>
+
+            <article class="stat-card" role="figure">
+                <div class="stat-icon red" aria-hidden="true">📋</div>
+                <div class="stat-info">
+                    <h3>Prontuários</h3>
+                    <p class="stat-number" aria-label="156 prontuários no sistema">156</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- PRÓXIMAS CONSULTAS -->
+        <section class="section" aria-labelledby="consultas-heading">
+            <h2 id="consultas-heading">Próximas Consultas</h2>
+
+            <table class="data-table" role="table" aria-label="Lista de consultas do dia">
+                <caption class="sr-only">Consultas agendadas para hoje</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Horário</th>
+                        <th scope="col">Paciente</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">09:00</th>
+                        <td>Maria Silva</td>
+                        <td>(11) 98765-4321</td>
+                        <td><span class="badge badge-success">Confirmado</span></td>
+                        <td>
+                            <button class="btn-icon" 
+                                    aria-label="Visualizar prontuário de Maria Silva"
+                                    data-tooltip="Ver prontuário">
+                                👁️
+                            </button>
+                            <button class="btn-icon" 
+                                    aria-label="Editar agendamento de Maria Silva"
+                                    data-tooltip="Editar consulta">
+                                📝
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10:00</th>
+                        <td>João Santos</td>
+                        <td>(11) 91234-5678</td>
+                        <td><span class="badge badge-warning">Pendente</span></td>
+                        <td>
+                            <button class="btn-icon" 
+                                    aria-label="Visualizar prontuário de João Santos"
+                                    data-tooltip="Ver prontuário">
+                                👁️
+                            </button>
+                            <button class="btn-icon" 
+                                    aria-label="Editar agendamento de João Santos"
+                                    data-tooltip="Editar consulta">
+                                📝
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11:30</th>
+                        <td>Ana Costa</td>
+                        <td>(11) 99876-5432</td>
+                        <td><span class="badge badge-success">Confirmado</span></td>
+                        <td>
+                            <button class="btn-icon" 
+                                    aria-label="Visualizar prontuário de Ana Costa"
+                                    data-tooltip="Ver prontuário">
+                                👁️
+                            </button>
+                            <button class="btn-icon" 
+                                    aria-label="Editar agendamento de Ana Costa"
+                                    data-tooltip="Editar consulta">
+                                📝
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

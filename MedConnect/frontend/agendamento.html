@@ -1,0 +1,162 @@
+agendamento 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calendário de agendamentos - MedConnect. Gerenciar consultas da clínica">
+    <title>Agendamentos - MedConnect</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+
+
+
+</head>
+<body>
+    <!-- Skip link para acessibilidade -->
+    <a href="#main-content" class="skip-link">Ir para conteúdo principal</a>
+
+    <!-- SIDEBAR (mesma estrutura) -->
+    <nav class="sidebar" role="navigation" aria-label="Navegação principal">
+        <div class="sidebar-header">
+            <img src="assets/logo.png" alt="Logo MedConnect" class="sidebar-logo">
+            <h2>MedConnect</h2>
+        </div>
+
+        <ul class="sidebar-menu" role="menubar">
+            <li role="none">
+                <a href="dashboard.html" class="menu-item" role="menuitem">📊 Dashboard</a>
+            </li>
+            <li role="none">
+                <a href="agendamentos.html" class="menu-item active" 
+                   role="menuitem" aria-current="page">📅 Agendamentos</a>
+            </li>
+            <li role="none">
+                <a href="prontuarios.html" class="menu-item" role="menuitem">📋 Prontuários</a>
+            </li>
+            <li role="none">
+                <a href="#" class="menu-item" role="menuitem">⚙️ Configurações</a>
+            </li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <img src="assets/avatar.png" alt="Foto do Dr. João Silva" class="avatar">
+                <div>
+                    <p class="-name">Dr. João Silva</p>
+                    <p class="user-role">Médico Responsável</p>
+                </div>
+            </div>
+            <a href="index.html" class="btn-logout">Sair</a>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="main-content" class="main-content" role="main">
+        <header class="page-header">
+            <h1>Calendário de Consultas</h1>
+            <div class="header-actions">
+                <button class="btn-primary" 
+                        aria-label="Agendar nova consulta na clínica">
+                    + Nova Consulta
+                </button>
+            </div>
+        </header>
+
+        <!-- CALENDÁRIO -->
+        <section class="section" aria-labelledby="calendario-heading">
+            <h2 id="calendario-heading">Calendário Mensal</h2>
+
+            <div class="calendar-header">
+                <button class="btn-icon" 
+                        aria-label="Mês anterior" 
+                        data-tooltip="Novembro 2025">
+                    ◀️
+                </button>
+                <h3>Novembro 2025</h3>
+                <button class="btn-icon" 
+                        aria-label="Próximo mês" 
+                        data-tooltip="Dezembro 2025">
+                    ▶️
+                </button>
+            </div>
+
+            <div class="calendar-grid" role="grid" aria-label="Calendário de novembro 2025">
+                <div class="calendar-day header" role="columnheader">Dom</div>
+                <div class="calendar-day header" role="columnheader">Seg</div>
+                <div class="calendar-day header" role="columnheader">Ter</div>
+                <div class="calendar-day header" role="columnheader">Qua</div>
+                <div class="calendar-day header" role="columnheader">Qui</div>
+                <div class="calendar-day header" role="columnheader">Sex</div>
+                <div class="calendar-day header" role="columnheader">Sáb</div>
+
+                <!-- Dias vazios -->
+                <div class="calendar-day" role="gridcell" aria-label="Domingo, 26 de outubro - sem consultas"></div>
+                <div class="calendar-day" role="gridcell" aria-label="Segunda-feira, 27 de outubro - sem consultas"></div>
+                <div class="calendar-day" role="gridcell" aria-label="Terça-feira, 28 de outubro - sem consultas"></div>
+                <div class="calendar-day" role="gridcell" aria-label="Quarta-feira, 29 de outubro - sem consultas"></div>
+                <div class="calendar-day" role="gridcell" aria-label="Quinta-feira, 30 de outubro - sem consultas"></div>
+                <div class="calendar-day" role="gridcell" aria-label="Sexta-feira, 31 de outubro - sem consultas">31</div>
+
+                <!-- Dias do mês -->
+                <div class="calendar-day" role="gridcell" aria-label="Sábado, 1 de novembro - sem consultas">1</div>
+                <div class="calendar-day" role="gridcell" aria-label="Domingo, 2 de novembro - sem consultas">2</div>
+                <div class="calendar-day" role="gridcell" aria-label="Segunda-feira, 3 de novembro - sem consultas">3</div>
+                <div class="calendar-day" role="gridcell" aria-label="Terça-feira, 4 de novembro - sem consultas">4</div>
+                <div class="calendar-day" role="gridcell" aria-label="Quarta-feira, 5 de novembro - sem consultas">5</div>
+                <div class="calendar-day" role="gridcell" aria-label="Quinta-feira, 6 de novembro - sem consultas">6</div>
+                <div class="calendar-day" role="gridcell" aria-label="Sexta-feira, 7 de novembro - sem consultas">7</div>
+                <div class="calendar-day" role="gridcell" aria-label="Sábado, 8 de novembro - sem consultas">8</div>
+                <div class="calendar-day" role="gridcell" aria-label="Domingo, 9 de novembro - 1 consulta">9</div>
+
+                <div class="calendar-day today" role="gridcell" 
+                     aria-label="Segunda-feira, 10 de novembro - hoje, 2 consultas">
+                    10 <span class="event-dot" aria-hidden="true"></span>
+                </div>
+                <div class="calendar-day" role="gridcell" aria-label="Terça-feira, 11 de novembro - 1 consulta">11</div>
+                <div class="calendar-day" role="gridcell" aria-label="Quarta-feira, 12 de novembro - sem consultas">12</div>
+                <div class="calendar-day" role="gridcell" aria-label="Quinta-feira, 13 de novembro - sem consultas">13</div>
+                <div class="calendar-day" role="gridcell" aria-label="Sexta-feira, 14 de novembro - sem consultas">14</div>
+                <div class="calendar-day" role="gridcell" aria-label="Sábado, 15 de novembro - 1 consulta">15 <span class="event-dot" aria-hidden="true"></span></div>
+                <div class="calendar-day" role="gridcell" aria-label="Domingo, 16 de novembro - sem consultas">16</div>
+                <!-- ... resto dos dias -->
+            </div>
+        </section>
+
+        <!-- CONSULTAS DO DIA -->
+        <section class="section" aria-labelledby="consultas-dia-heading">
+            <h2 id="consultas-dia-heading">Consultas de 10/11/2025</h2>
+
+            <ol class="timeline" role="list" aria-label="Cronograma de consultas do dia">
+                <li class="timeline-item" role="listitem">
+                    <time class="timeline-time" datetime="09:00">09:00</time>
+                    <div class="timeline-content">
+                        <h3>Maria Silva</h3>
+                        <p>Consulta de rotina - Controle de hipertensão</p>
+                        <span class="badge badge-success" aria-label="Consulta confirmada">Confirmado</span>
+                    </div>
+                </li>
+
+                <li class="timeline-item" role="listitem">
+                    <time class="timeline-time" datetime="10:00">10:00</time>
+                    <div class="timeline-content">
+                        <h3>João Santos</h3>
+                        <p>Retorno - Acompanhamento pós-cirúrgico</p>
+                        <span class="badge badge-warning" aria-label="Aguardando confirmação">Pendente</span>
+                    </div>
+                </li>
+
+                <li class="timeline-item" role="listitem">
+                    <time class="timeline-time" datetime="11:30">11:30</time>
+                    <div class="timeline-content">
+                        <h3>Ana Costa</h3>
+                        <p>Primeira consulta - Avaliação ginecológica</p>
+                        <span class="badge badge-success" aria-label="Consulta confirmada">Confirmado</span>
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>

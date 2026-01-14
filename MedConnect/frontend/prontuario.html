@@ -1,0 +1,180 @@
+prontuario 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prontuários médicos - MedConnect. Acessar e gerenciar prontuários de pacientes">
+    <title>Prontuários - MedConnect</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+
+</head>
+<body>
+    <!-- Skip link para acessibilidade -->
+    <a href="#main-content" class="skip-link">Ir para conteúdo principal</a>
+
+    <!-- SIDEBAR (mesma estrutura do dashboard) -->
+    <nav class="sidebar" role="navigation" aria-label="Navegação principal">
+        <div class="sidebar-header">
+            <img src="assets/logo.png" alt="Logo MedConnect" class="sidebar-logo">
+            <h2>MedConnect</h2>
+        </div>
+
+        <ul class="sidebar-menu" role="menubar">
+            <li role="none">
+                <a href="dashboard.html" class="menu-item" role="menuitem">📊 Dashboard</a>
+            </li>
+            <li role="none">
+                <a href="agendamentos.html" class="menu-item" role="menuitem">📅 Agendamentos</a>
+            </li>
+            <li role="none">
+                <a href="prontuarios.html" class="menu-item active" 
+                   role="menuitem" aria-current="page">📋 Prontuários</a>
+            </li>
+            <li role="none">
+                <a href="#" class="menu-item" role="menuitem">⚙️ Configurações</a>
+            </li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <img src="assets/avatar.png" alt="Foto do Dr. João Silva" class="avatar">
+                <div>
+                    <p class="user-name">Dr. João Silva</p>
+                    <p class="user-role">Médico Responsável</p>
+                </div>
+            </div>
+            <a href="index.html" class="btn-logout">Sair</a>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="main-content" class="main-content" role="main">
+        <header class="page-header">
+            <h1>Prontuários Médicos</h1>
+            <div class="header-actions">
+                <label for="search-paciente" class="sr-only">Buscar paciente</label>
+                <input 
+                    type="search" 
+                    id="search-paciente" 
+                    placeholder="Buscar por nome ou CPF..." 
+                    class="search-input"
+                    aria-label="Buscar prontuário por nome do paciente ou CPF"
+                >
+                <button class="btn-primary" 
+                        aria-label="Criar novo prontuário médico">
+                    + Novo Prontuário
+                </button>
+            </div>
+        </header>
+
+        <!-- LISTA DE PRONTUÁRIOS -->
+        <section class="section" aria-labelledby="prontuarios-heading">
+            <h2 id="prontuarios-heading">Prontuários Recentes</h2>
+
+            <div class="prontuarios-grid" role="list" aria-label="Lista de prontuários">
+                <!-- Prontuário 1 -->
+                <article class="prontuario-card" role="listitem">
+                    <header class="prontuario-header">
+                        <h3>Maria Silva</h3>
+                        <span class="badge badge-success" aria-label="Prontuário completo">Completo</span>
+                    </header>
+
+                    <div class="prontuario-body">
+                        <p><strong>Data da consulta:</strong> <time datetime="2025-11-10">10/11/2025</time></p>
+                        <p><strong>Sintomas relatados:</strong> Febre persistente, tosse seca há 3 dias</p>
+                        <p><strong>Alergias conhecidas:</strong> Nenhuma conhecida</p>
+                        <p><strong>Medicamentos em uso:</strong> Paracetamol 500mg (uso contínuo)</p>
+                    </div>
+
+                    <footer class="prontuario-footer">
+                        <button class="btn-secondary" 
+                                aria-label="Visualizar PDF do prontuário de Maria Silva"
+                                data-tooltip="Baixar PDF">
+                            📄 Ver PDF
+                        </button>
+                        <button class="btn-secondary" 
+                                aria-label="Editar informações do prontuário de Maria Silva"
+                                data-tooltip="Editar dados">
+                            ✏️ Editar
+                        </button>
+                        <button class="btn-secondary" 
+                                aria-label="Imprimir prontuário de Maria Silva"
+                                data-tooltip="Imprimir documento">
+                            🖨️ Imprimir
+                        </button>
+                    </footer>
+                </article>
+
+                <!-- Prontuário 2 -->
+                <article class="prontuario-card" role="listitem">
+                    <header class="prontuario-header">
+                        <h3>João Santos</h3>
+                        <span class="badge badge-warning" aria-label="Prontuário incompleto">Incompleto</span>
+                    </header>
+
+                    <div class="prontuario-body">
+                        <p><strong>Data da consulta:</strong> <time datetime="2025-11-10">10/11/2025</time></p>
+                        <p><strong>Sintomas relatados:</strong> Dor de cabeça intensa, náuseas</p>
+                        <p><strong>Alergias conhecidas:</strong> Aguardando resposta do paciente</p>
+                        <p><strong>Medicamentos em uso:</strong> Não informado</p>
+                    </div>
+
+                    <footer class="prontuario-footer">
+                        <button class="btn-secondary" 
+                                aria-label="Visualizar PDF do prontuário de João Santos"
+                                data-tooltip="Baixar PDF">
+                            📄 Ver PDF
+                        </button>
+                        <button class="btn-secondary" 
+                                aria-label="Editar informações do prontuário de João Santos"
+                                data-tooltip="Editar dados">
+                            ✏️ Editar
+                        </button>
+                        <button class="btn-secondary" 
+                                aria-label="Imprimir prontuário de João Santos"
+                                data-tooltip="Imprimir documento">
+                            🖨️ Imprimir
+                        </button>
+                    </footer>
+                </article>
+
+                <!-- Prontuário 3 -->
+                <article class="prontuario-card" role="listitem">
+                    <header class="prontuario-header">
+                        <h3>Ana Costa</h3>
+                        <span class="badge badge-success" aria-label="Prontuário completo">Completo</span>
+                    </header>
+
+                    <div class="prontuario-body">
+                        <p><strong>Data da consulta:</strong> <time datetime="2025-11-09">09/11/2025</time></p>
+                        <p><strong>Sintomas relatados:</strong> Dor abdominal crônica, distensão</p>
+                        <p><strong>Alergias conhecidas:</strong> Penicilina (reação alérgica grave)</p>
+                        <p><strong>Medicamentos em uso:</strong> Buscopan 10mg (3x/dia)</p>
+                    </div>
+
+                    <footer class="prontuario-footer">
+                        <button class="btn-secondary" 
+                                aria-label="Visualizar PDF do prontuário de Ana Costa"
+                                data-tooltip="Baixar PDF">
+                            📄 Ver PDF
+                        </button>
+                        <button class="btn-secondary" 
+                                aria-label="Editar informações do prontuário de Ana Costa"
+                                data-tooltip="Editar dados">
+                            ✏️ Editar
+                        </button>
+                        <button class="btn-secondary" 
+                                aria-label="Imprimir prontuário de Ana Costa"
+                                data-tooltip="Imprimir documento">
+                            🖨️ Imprimir
+                        </button>
+                    </footer>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

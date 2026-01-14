@@ -1,0 +1,80 @@
+login
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MedConnect - Sistema de gestão clínica com agendamento e prontuários acessíveis">
+    <title>MedConnect - Login Seguro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+
+</head>
+<body>
+    <!-- Skip link para acessibilidade -->
+    <a href="#main-content" class="skip-link">Ir para conteúdo principal</a>
+
+    <main id="main-content" class="login-container">
+        <article class="login-box" role="main">
+            <header>
+                <img src="assets/logo.png" alt="Logo da MedConnect - Sistema de gestão clínica" class="logo">
+                <h1>MedConnect</h1>
+                <p class="subtitle">Sistema de Gestão Clínica</p>
+            </header>
+
+            <form id="loginForm" action="#" method="post" novalidate>
+                <fieldset>
+                    <legend class="sr-only">Credenciais de acesso</legend>
+
+                    <div class="input-group">
+                        <label for="email">E-mail da clínica ou profissional de saúde</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            placeholder="exemplo@clinicamedica.com"
+                            aria-describedby="email-help"
+                            autocomplete="email"
+                        >
+                        <small id="email-help" class="sr-only">Digite o e-mail cadastrado na clínica</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Senha de acesso</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            required 
+                            placeholder="Digite sua senha"
+                            aria-describedby="password-help"
+                            autocomplete="current-password"
+                            minlength="6"
+                        >
+                        <small id="password-help" class="sr-only">Senha deve ter pelo menos 6 caracteres</small>
+                        <div class="error-message" role="alert" aria-live="polite">
+                            Senha incorreta. Tente novamente.
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-primary">
+                    <span class="sr-only">Entrar no sistema</span>
+                    Acessar Sistema
+                </button>
+
+                <a href="#" class="forgot-password" aria-label="Recuperar acesso à conta">
+                    Esqueceu a senha?
+                </a>
+            </form>
+
+            <footer class="login-footer">
+                <p>Sistema seguro e acessível para clínicas</p>
+                <p>Conforme LGPD e WCAG 2.1</p>
+            </footer>
+        </article>
+    </main>
+</body>
+</html>

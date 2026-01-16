@@ -1,0 +1,31 @@
+header{
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.5)), url("./Clinica-Vet-Hektor2.png") no-repeat center top;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    z-index: 1;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.slogan-1-2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-top: 10px;
+
+}
+
+
+
+    

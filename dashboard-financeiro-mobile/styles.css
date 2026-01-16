@@ -1,0 +1,267 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #111;
+    margin: 0;
+    padding: 0;
+    color: #f5f5f5;
+}
+header {
+    background: #181818;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    border-bottom: 2px solid #2d7a46;
+}
+main {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 8px;
+}
+.cards-resumo {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    margin: 18px 0;
+}
+.card {
+    flex: 1;
+    background: #181818;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    padding: 16px 8px;
+    text-align: center;
+    font-size: 1em;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+    color: #f5f5f5;
+}
+.card span {
+    font-size: 0.95em;
+    color: #b0b0b0;
+}
+.card-saldo {
+    border-bottom: 4px solid #3498db;
+}
+.card-receita {
+    border-bottom: 4px solid #2ecc71;
+}
+.card-despesa {
+    border-bottom: 4px solid #e74c3c;
+}
+.card h2 {
+    margin: 8px 0 0 0;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.card i {
+    font-size: 1.5em;
+    margin-bottom: 6px;
+    display: block;
+}
+.form-section, .chart-section, .table-section, .categorias-section, .historico-section, .saldo-linha-section, .resumo-mes-section {
+    background: #181818;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    margin-bottom: 24px;
+    padding: 18px 12px;
+    color: #f5f5f5;
+}
+form label {
+    font-weight: 500;
+    margin-bottom: 2px;
+    color: #f5f5f5;
+}
+form input, form select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    font-size: 1em;
+    background: #111;
+    color: #f5f5f5;
+}
+form input:focus, form select:focus {
+    outline: 2px solid #3498db;
+    background: #181818;
+    transition: background 0.2s;
+}
+form button {
+    background: #2d7a46;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    transition: background 0.2s, transform 0.2s;
+}
+form button:active {
+    background: #256537;
+    transform: scale(0.98);
+}
+.receita-inicial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: #23272f;
+    padding: 10px 0;
+    color: #e0e0e0;
+}
+.receita-inicial-container label {
+    font-weight: 500;
+    color: #2ecc71;
+}
+.receita-inicial-container input {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    font-size: 1em;
+    width: 100px;
+    background: #181c24;
+    color: #e0e0e0;
+}
+.receita-inicial-container input:focus {
+    outline: 2px solid #2ecc71;
+    background: #23272f;
+}
+.receita-inicial-container button {
+    background: #2d7a46;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+}
+.receita-inicial-container button:hover {
+    background: #256537;
+}
+.receita-inicial-mes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: #181818;
+    padding: 10px 0;
+    color: #f5f5f5;
+    margin-bottom: 8px;
+}
+.receita-inicial-mes-container label {
+    font-weight: 500;
+    color: #2ecc71;
+}
+.receita-inicial-mes-container input {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    font-size: 1em;
+    width: 100px;
+    background: #111;
+    color: #f5f5f5;
+}
+.receita-inicial-mes-container button {
+    background: #2d7a46;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+}
+.receita-inicial-mes-container button:hover {
+    background: #256537;
+}
+.btn-tema {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: #23272f;
+    color: #f1c40f;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-tema:hover {
+    background: #181c24;
+}
+#pieChart, #lineChart {
+    width: 100% !important;
+    max-width: 320px;
+    margin: 0 auto;
+    background: #181818;
+    border-radius: 8px;
+}
+.categorias-section ul, .historico-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.categorias-section li, .historico-section li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+    font-size: 1em;
+    color: #f5f5f5;
+}
+.categorias-section li:last-child, .historico-section li:last-child {
+    border-bottom: none;
+}
+.categorias-section .cat-nome {
+    font-weight: 500;
+    color: #3498db;
+}
+.categorias-section .cat-valor {
+    font-weight: bold;
+    color: #e74c3c;
+}
+.historico-section .btn-editar, .historico-section .btn-excluir {
+    background: none;
+    border: none;
+    color: #f5f5f5;
+    font-size: 1.1em;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.historico-section .btn-editar:hover {
+    color: #2ecc71;
+}
+.historico-section .btn-excluir:hover {
+    color: #e74c3c;
+}
+footer {
+    background: #181818;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 0.95em;
+    border-top: 2px solid #2d7a46;
+}
+@media (max-width: 520px) {
+    main {
+        max-width: 99vw;
+        padding: 2px;
+    }
+    .cards-resumo {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .card {
+        padding: 12px 4px;
+    }
+    #pieChart, #lineChart {
+        max-width: 98vw;
+    }
+    .form-section, .table-section, .chart-section, .categorias-section, .historico-section, .saldo-linha-section, .resumo-mes-section {
+        padding: 10px 2px;
+    }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dashboard Financeiro Mobile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Financeiro</h1>
+        <div class="receita-inicial-mes-container">
+            <label for="mesReceita">Mês:</label>
+            <select id="mesReceita">
+                <option value="Janeiro">Janeiro</option>
+                <option value="Fevereiro">Fevereiro</option>
+                <option value="Março">Março</option>
+                <option value="Abril">Abril</option>
+                <option value="Maio">Maio</option>
+                <option value="Junho">Junho</option>
+                <option value="Julho">Julho</option>
+                <option value="Agosto">Agosto</option>
+                <option value="Setembro">Setembro</option>
+                <option value="Outubro">Outubro</option>
+                <option value="Novembro">Novembro</option>
+                <option value="Dezembro">Dezembro</option>
+            </select>
+            <label for="receitaInicialMes">Receita inicial:</label>
+            <input type="text" id="receitaInicialMes" min="0" step="0.01" value="0">
+            <button id="btnSetReceitaMes"><i class="fa-solid fa-check"></i> Definir</button>
+        </div>
+    </header>
+    <main>
+        <section class="cards-resumo">
+            <div class="card card-saldo"><i class="fa-solid fa-wallet"></i>
+                <span>Saldo atual</span>
+                <h2 id="saldoCard">R$ 0,00</h2>
+            </div>
+            <div class="card card-receita"><i class="fa-solid fa-arrow-up"></i>
+                <span>Receitas</span>
+                <h2 id="receitaCard">R$ 0,00</h2>
+            </div>
+            <div class="card card-despesa"><i class="fa-solid fa-arrow-down"></i>
+                <span>Despesas</span>
+                <h2 id="despesaCard">R$ 0,00</h2>
+            </div>
+        </section>
+        <section class="form-section">
+            <form id="finance-form">
+                <label for="month">Mês:</label>
+                <select id="month" required>
+                    <option value="Janeiro">Janeiro</option>
+                    <option value="Fevereiro">Fevereiro</option>
+                    <option value="Março">Março</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Maio">Maio</option>
+                    <option value="Junho">Junho</option>
+                    <option value="Julho">Julho</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Setembro">Setembro</option>
+                    <option value="Outubro">Outubro</option>
+                    <option value="Novembro">Novembro</option>
+                    <option value="Dezembro">Dezembro</option>
+                </select>
+                <label for="categoria">Categoria:</label>
+                <input type="text" id="categoria" list="categorias-list" placeholder="Ex: Mercado, Luz, etc" required>
+                <datalist id="categorias-list">
+                    <option value="Alimentação">
+                    <option value="Viagem">
+                    <option value="Lazer">
+                    <option value="Moradia">
+                    <option value="Transporte">
+                    <option value="Outros">
+                </datalist>
+                <label for="saida">Saída:</label>
+                <input type="number" id="saida" required min="0" step="0.01" inputmode="decimal">
+                <button type="submit"><i class="fa-solid fa-plus"></i> Adicionar</button>
+            </form>
+        </section>
+        <section class="chart-section">
+            <h2>Despesas por categoria</h2>
+            <canvas id="pieChart"></canvas>
+        </section>
+        <section class="saldo-linha-section">
+            <h2>Saldo ao longo dos meses</h2>
+            <canvas id="lineChart"></canvas>
+        </section>
+        <section class="historico-section">
+            <h2>Histórico de lançamentos</h2>
+            <ul id="historico-lista">
+                <!-- Lançamentos inseridos dinamicamente -->
+            </ul>
+        </section>
+        <section class="resumo-mes-section">
+            <h2>Resumo do mês selecionado</h2>
+            <div id="resumo-mes"></div>
+        </section>
+        <section class="table-section">
+            <h2>Resumo mensal</h2>
+            <table id="finance-table">
+                <thead>
+                    <tr>
+                        <th>Mês</th>
+                        <th>Receita</th>
+                        <th>Saída</th>
+                        <th>Saldo</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dados inseridos dinamicamente -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Dashboard Mobile</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

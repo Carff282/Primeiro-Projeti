@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vet Héktor - Clínica Veterinária</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">Vet Héktor</h1>
+            <ul class="menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <h2>Bem-vindo à Vet Héktor</h2>
+            <p>Cuidando com carinho e profissionalismo do seu melhor amigo!</p>
+            <div class="imagens-animais">
+                <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&w=200" alt="Cachorro feliz" class="animal-img">
+                <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&w=200" alt="Gato fofo" class="animal-img">
+                <img src="https://images.pexels.com/photos/326012/pexels-photo-326012.jpeg?auto=compress&w=200" alt="Coelho" class="animal-img">
+            </div>
+            <button class="btn-agendar" id="btn-agendar">Agendar Consulta</button>
+        </section>
+        <section id="servicos" class="servicos">
+            <h2>Nossos Serviços</h2>
+            <ul class="servicos-lista">
+                <li><i class="fa-solid fa-stethoscope"></i> Consultas veterinárias</li>
+                <li><i class="fa-solid fa-syringe"></i> Vacinação</li>
+                <li><i class="fa-solid fa-vial"></i> Exames laboratoriais</li>
+                <li><i class="fa-solid fa-scissors"></i> Cirurgias</li>
+                <li><i class="fa-solid fa-shower"></i> Banho e Tosa</li>
+                <li><i class="fa-solid fa-truck-medical"></i> Atendimento emergencial</li>
+            </ul>
+        </section>
+        <section id="contato" class="contato">
+            <h2>Contato</h2>
+            <p>Endereço: Rua dos Animais, 123 - Centro</p>
+            <p>Telefone: (11) 99999-8888</p>
+            <form id="form-contato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" required></textarea>
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+            </form>
+            <div id="msg-sucesso" style="display:none; color:green; margin-top:10px;">Mensagem enviada com sucesso!</div>
+        </section>
+        <section class="agendamento-modal" id="agendamento-modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close-modal" id="close-modal">&times;</span>
+                <h2>Agendar Consulta</h2>
+                <form id="form-agendar">
+                    <label for="pet">Nome do Pet:</label>
+                    <input type="text" id="pet" required>
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" required>
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" required>
+                    <button type="submit" class="btn-agendar-modal">Agendar</button>
+                </form>
+                <div id="msg-agendar" style="display:none; color:green; margin-top:10px;">Consulta agendada com sucesso!</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Vet Héktor - Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
